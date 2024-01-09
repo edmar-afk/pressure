@@ -1,0 +1,214 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>JHCSC</title>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<meta
+			http-equiv="X-UA-Compatible"
+			content="ie=edge" />
+		<link
+			rel="stylesheet"
+			href="{% static 'css/style.css' %}" />
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css"
+			rel="stylesheet" />
+	</head>
+
+	<body class="bg-slate-200 font-arial leading-normal tracking-normal">
+		<button
+			data-drawer-target="default-sidebar"
+			data-drawer-toggle="default-sidebar"
+			aria-controls="default-sidebar"
+			type="button"
+			class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
+			<span class="sr-only">Open sidebar</span>
+			<svg
+				class="w-6 h-6"
+				aria-hidden="true"
+				fill="currentColor"
+				viewBox="0 0 20 20"
+				xmlns="http://www.w3.org/2000/svg">
+				<path
+					clip-rule="evenodd"
+					fill-rule="evenodd"
+					d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
+			</svg>
+		</button>
+		<aside
+			id="default-sidebar"
+			class="fixed top-0 left-0 z-50 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
+			aria-label="Sidebar">
+			<div class="h-full px-3 py-4 overflow-y-auto">
+				<div class="flex flex-row justify-center mb-8 mt-4">
+					<p class="font-bold text-2xl">JHCSC</p>
+				</div>
+				<ul class="space-y-2 font-medium">
+					<li class="bg-white rounded-full shadow-xl">
+						<a
+							href="{% url 'homepage' %}"
+							class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100group">
+							<svg
+								class="w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900"
+								aria-hidden="true"
+								xmlns="http://www.w3.org/2000/svg"
+								fill="currentColor"
+								viewBox="0 0 22 21">
+								<path
+									d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z" />
+								<path
+									d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z" />
+							</svg>
+							<span class="ml-3">Dashboard</span>
+						</a>
+					</li>
+
+					<li class="rounded-full hover:shadow-xl hover:bg-white">
+						<a
+							href="{% url 'firstyear' %}"
+							class="flex items-center p-2 text-gray-900 mt-16 rounded-lg">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke-width="1.5"
+								stroke="currentColor"
+								class="w-6 h-6">
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+							</svg>
+
+							<p class="ml-3">1st Year</p>
+						</a>
+					</li>
+
+					<li class="rounded-full hover:shadow-xl hover:bg-white">
+						<a
+							href="{% url 'secondyear' %}"
+							class="flex items-center p-2 text-gray-900 rounded-lg">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke-width="1.5"
+								stroke="currentColor"
+								class="w-6 h-6">
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+							</svg>
+
+							<p class="ml-3">2nd Year</p>
+						</a>
+					</li>
+
+					<li class="rounded-full hover:shadow-xl hover:bg-white">
+						<a
+							href="{% url 'thirdyear' %}"
+							class="flex items-center p-2 text-gray-900 rounded-lg">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke-width="1.5"
+								stroke="currentColor"
+								class="w-6 h-6">
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+							</svg>
+
+							<p class="ml-3">3rd Year</p>
+						</a>
+					</li>
+
+					<li class="rounded-full hover:shadow-xl hover:bg-white">
+						<a
+							href="{% url 'fourthyear' %}"
+							class="flex items-center p-2 text-gray-900 rounded-lg">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke-width="1.5"
+								stroke="currentColor"
+								class="w-6 h-6">
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+							</svg>
+
+							<p class="ml-3">4th Year</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</aside>
+
+		<div class="p-4 sm:ml-64">
+			<div class="p-4 rounded-lg">
+				<div class="w-full bg-white rounded-lg shadow p-4 md:p-6">
+					<div class="flex justify-between mb-3">
+						<div class="flex items-center">
+							<div class="flex justify-center items-center">
+								<h5 class="text-xl font-bold leading-none text-gray-900 pr-1">DASHBOARD</h5>
+							</div>
+						</div>
+					</div>
+
+					<div class="bg-gray-50 p-3 rounded-lg">
+						<p class="mb-2 mt-2 text-lg font-semibold text-gray-400">
+							Nnumber of respondents indicate the most stress-inducing topics
+						</p>
+						<div class="grid grid-cols-4 gap-3 mb-2">
+							<dl
+								class="bg-orange-100 hover:bg-orange-200 duration-200 rounded-lg flex flex-col items-center justify-center h-[78px]">
+								<dt
+									class="w-8 h-8 rounded-full bg-orange-300 text-orange-600 text-sm font-medium flex items-center justify-center mb-1">
+									{{first_year}}
+								</dt>
+								<dd class="text-orange-600 text-sm font-medium">1st Year</dd>
+							</dl>
+							<dl
+								class="bg-teal-100 hover:bg-teal-200 duration-200 rounded-lg flex flex-col items-center justify-center h-[78px]">
+								<dt
+									class="w-8 h-8 rounded-full bg-teal-300 text-teal-600 text-sm font-medium flex items-center justify-center mb-1">
+									{{second_year}}
+								</dt>
+								<dd class="text-teal-600 text-sm font-medium">2nd Year</dd>
+							</dl>
+							<dl
+								class="bg-blue-100 hover:bg-blue-200 duration-200 rounded-lg flex flex-col items-center justify-center h-[78px]">
+								<dt
+									class="w-8 h-8 rounded-full bg-blue-300 text-blue-600 text-sm font-medium flex items-center justify-center mb-1">
+									{{third_year}}
+								</dt>
+								<dd class="text-blue-600 text-sm font-medium">3rd Year</dd>
+							</dl>
+
+							<dl
+								class="bg-red-100 hover:bg-red-200 duration-200 rounded-lg flex flex-col items-center justify-center h-[78px]">
+								<dt
+									class="w-8 h-8 rounded-full bg-red-300 text-red-600 text-sm font-medium flex items-center justify-center mb-1">
+									{{fourth_year}}
+								</dt>
+								<dd class="text-red-600 text-sm font-medium">4th Year</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+	</body>
+</html>

@@ -1,0 +1,331 @@
+{% load static  %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>JHCSC - Fourth Year</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-slate-200 font-arial leading-normal tracking-normal">
+<button
+			data-drawer-target="default-sidebar"
+			data-drawer-toggle="default-sidebar"
+			aria-controls="default-sidebar"
+			type="button"
+			class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
+			<span class="sr-only">Open sidebar</span>
+			<svg
+				class="w-6 h-6"
+				aria-hidden="true"
+				fill="currentColor"
+				viewBox="0 0 20 20"
+				xmlns="http://www.w3.org/2000/svg">
+				<path
+					clip-rule="evenodd"
+					fill-rule="evenodd"
+					d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
+			</svg>
+		</button>
+    <aside id="default-sidebar"
+           class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
+           aria-label="Sidebar">
+        <div class="h-full px-3 py-4 overflow-y-auto">
+            <div class="flex flex-row justify-center mb-8 mt-4">
+                <p class="font-bold text-2xl">JHCSC</p>
+            </div>
+            <ul class="space-y-2 font-medium">
+                <li class="rounded-full hover:shadow-xl hover:bg-white">
+                    <a href="{% url 'homepage' %}"
+                       class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 group">
+                        <svg class="w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900"
+                             aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                             viewBox="0 0 22 21">
+                            <path
+                                  d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z" />
+                            <path
+                                  d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z" />
+                        </svg>
+                        <span class="ml-3">Dashboard</span>
+                    </a>
+                </li>
+
+                <li class="rounded-full hover:bg-white hover:shadow-xl">
+                    <a href="{% url 'firstyear' %}"
+                       class="flex items-center p-2 text-gray-900 mt-16 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                             stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                  d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                        </svg>
+
+                        <p class="ml-3">1st Year</p>
+
+                    </a>
+                </li>
+
+                <li class="rounded-full hover:shadow-xl hover:bg-white">
+                    <a href="{% url 'secondyear' %}"
+                       class="flex items-center p-2 text-gray-900 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                             stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                  d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                        </svg>
+
+                        <p class="ml-3">2nd Year</p>
+
+                    </a>
+                </li>
+
+                <li class="rounded-full hover:shadow-xl hover:bg-white">
+                    <a href="{% url 'thirdyear' %}"
+                       class="flex items-center p-2 text-gray-900 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                             stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                  d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                        </svg>
+
+                        <p class="ml-3">3rd Year</p>
+
+                    </a>
+                </li>
+
+                <li class="rounded-full shadow-xl bg-white">
+                    <a href="{% url 'fourthyear' %}"
+                       class="flex items-center p-2 text-gray-900 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                             stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                  d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                        </svg>
+
+                        <p class="ml-3">4th Year</p>
+
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </aside>
+
+
+    <div class="p-4 sm:ml-64">
+        <div class="p-4  rounded-lg">
+
+            <div class="w-full bg-white rounded-lg shadow p-4 md:p-6">
+                <div class="flex justify-between mb-3">
+                    <div class="flex items-center">
+                        <div class="flex justify-center items-center">
+                            <h5 class="text-xl font-bold leading-none text-gray-900 pr-1">DASHBOARD - Fourth Year Subjects</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-3 rounded-lg">
+                    <div class="mt-4">
+                        <a href="#" data-modal-target="authentication-modal" data-modal-toggle="authentication-modal"
+                           class="bg-blue-200 hover:bg-blue-400 text-blue-600 hover:text-white duration-200 rounded-lg justify-center p-4">
+                            Add Respondent
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Main modal -->
+            <div id="authentication-modal" tabindex="-1" aria-hidden="true"
+                 class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                <div class="relative w-full max-w-lg max-h-full">
+                    <!-- Modal content -->
+                    <div class="relative bg-white rounded-lg shadow">
+                        <button type="button"
+                                class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center"
+                                data-modal-hide="authentication-modal">
+                            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                 viewBox="0 0 14 14">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                            </svg>
+                            <span class="sr-only">Close modal</span>
+                        </button>
+                        <div class="px-6 py-6 lg:px-8">
+                            <h3 class="mb-4 text-xl font-medium text-gray-900">Most Pressured Subject in BSIT - 4th Year</h3>
+                            <form class="space-y-6" action="#" method="POST" enctype="multipart/form-data">
+                              {% csrf_token %}
+                                <div>
+                                
+                                  <div class="mb-6">
+                                    <input type="text" id="text" name="year" class="bg-gray-50 opacity-0 hidden border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5" placeholder="Fourth Year" value="Fourth Year">
+                                  </div>
+
+                                    <label for="subject" class="block mb-2 text-sm font-medium text-gray-900">Subject
+                                        select:</label>
+                                    <select id="subject" name="subject"
+                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                                        <option selected value="IT 401">IT 401 - Capstone Projects 2</option>
+                                        <option value="IT 402">IT 402 - System Administration and Maintenance</option>
+                                        <option value="IT 403">IT 403 - Information Assurance and Security 2</option>
+                                        <option value="IT 404">IT 404 - IT Elect. 3 (Data Mining)</option>
+                                        <option value="IT 405">IT 405 - Prof. Elect. 3 (Object-Oriented Programming 2)</option>
+                                        <option value="IT 406">IT 406 - IT Elect. 4 (Professional Seminar)</option>
+                                        <option value="IT 407">IT 407 - Internship / OJT/Practicum</option>
+                                    </select>
+
+                                </div>
+
+                                <button type="submit"
+                                        class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Submit</button>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+            
+<div class="w-full bg-white rounded-lg shadow p-4 md:p-6 mt-4">
+   
+    <div id="bar-chart"></div>
+     
+  </div>
+  
+  <script>
+    // ApexCharts options and config
+    window.addEventListener("load", function() {
+      var sub1 = "{{sub1}}";
+      var sub1 = Number(sub1);
+      
+      var sub2 = "{{sub2}}";
+      var sub2 = Number(sub2);
+
+      var sub3 = "{{sub3}}";
+      var sub3 = Number(sub3);
+
+      var sub4 = "{{sub4}}";
+      var sub4 = Number(sub4);
+
+      var sub5 = "{{sub5}}";
+      var sub5 = Number(sub5);
+
+      var sub6 = "{{sub6}}";
+      var sub6 = Number(sub6);
+
+      var sub7 = "{{sub7}}";
+      var sub7 = Number(sub7);
+
+      var options = {
+        series: [
+          {
+            name: "Respondents",
+            color: "#31C48D",
+            data: [sub1, sub2, sub3, sub4, sub5, sub6, sub7],
+          },
+          
+        ],
+        chart: {
+          sparkline: {
+            enabled: false,
+          },
+          type: "bar",
+          width: "100%",
+          height: 400,
+          toolbar: {
+            show: false,
+          }
+        },
+        fill: {
+          opacity: 1,
+        },
+        plotOptions: {
+          bar: {
+            horizontal: true,
+            columnWidth: "100%",
+            borderRadiusApplication: "end",
+            borderRadius: 6,
+            dataLabels: {
+              position: "top",
+            },
+          },
+        },
+        legend: {
+          show: true,
+          position: "bottom",
+        },
+        dataLabels: {
+          enabled: false,
+        },
+        tooltip: {
+          shared: true,
+          intersect: false,
+          formatter: function (value) {
+            return value
+          }
+        },
+        xaxis: {
+          labels: {
+            show: true,
+            style: {
+              fontFamily: "Inter, sans-serif",
+              cssClass: 'text-xs font-normal fill-gray-500 fill-gray-400'
+            },
+            formatter: function(value) {
+              return value
+            }
+          },
+          categories: ["IT 401", "IT 402", "IT 403", "IT 404", "IT 405", "IT 406", "IT 407"],
+          axisTicks: {
+            show: false,
+          },
+          axisBorder: {
+            show: false,
+          },
+        },
+        yaxis: {
+          labels: {
+            show: true,
+            style: {
+              fontFamily: "Inter, sans-serif",
+              cssClass: 'text-xs font-normal fill-gray-500 fill-gray-400'
+            }
+          }
+        },
+        grid: {
+          show: true,
+          strokeDashArray: 4,
+          padding: {
+            left: 2,
+            right: 2,
+            top: -20
+          },
+        },
+        fill: {
+          opacity: 1,
+        }
+      }
+  
+      if(document.getElementById("bar-chart") && typeof ApexCharts !== 'undefined') {
+        const chart = new ApexCharts(document.getElementById("bar-chart"), options);
+        chart.render();
+      }
+    });
+  </script>
+  
+
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+</body>
+
+</html>
